@@ -6,6 +6,9 @@
     text-decoration:none;
     user-select:none;
     font-family: 'Montserrat';
+    white-space:nowrap;
+    border:none;
+    background:none;
 
 }
 html{
