@@ -1,4 +1,4 @@
 
-export function TvSows(){
+export function TvShows(){
     return <h1>TvShows</h1>
 }
