@@ -1,0 +1,17 @@
+.Header{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    min-height:10vh;
+    background:#000;
+}
+
+.Navbar_list{
+    ul {
+        display:flex;
+
+        li{
+            padding:0 12px ;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import Styles from "./styles.module.scss"
 import {Routes, Route, BrowserRouter} from "react-router-dom"
 import {Home} from"../Pages/Home/home"
 import {Movies} from"../Pages/Movies/movies"
@@ -11,6 +12,7 @@ export function Routers (){
     return(
         <BrowserRouter>
         <Navbar/>
+        <div className={Styles.Container}>
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/Movies" element={<Movies/>}/>
@@ -19,6 +21,7 @@ export function Routers (){
             <Route path="/Geners" element={<Geners/>}/>
             <Route path="/Search" element={<Search/>}/>
         </Routes>
+        </div>
         </BrowserRouter>
     )
 }
