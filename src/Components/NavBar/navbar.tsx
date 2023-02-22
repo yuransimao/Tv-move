@@ -4,6 +4,7 @@ import { BiSearch} from "react-icons/bi"
 import Styles from "./styles.module.scss"
 
 export function Navbar() {
+    
     return (
         <div className={Styles.Header}>
 
@@ -14,7 +15,7 @@ export function Navbar() {
 
             <div className={Styles.Navbar_list}>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/" className={Styles.active}>Home</Link></li>
                     <li><Link to="/Movies">Movies</Link></li>
                     <li><Link to="/TVShows">Tv Shows</Link></li>
                     <li><Link to="/Watchlist">Watchlist</Link></li>
