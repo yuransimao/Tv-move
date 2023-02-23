@@ -2,9 +2,14 @@ import { Link } from "react-router-dom"
 import { FiMenu } from "react-icons/fi"
 import { BiSearch} from "react-icons/bi"
 import Styles from "./styles.module.scss"
+import {useState, useRef} from 'react'
 
 export function Navbar() {
+       const ul = useRef<HTMLUListElement>(null)
     
+    console.log(ul.current?.classList)
+    
+   
     return (
         <div className={Styles.Header}>
 
@@ -14,12 +19,12 @@ export function Navbar() {
             </div>
 
             <div className={Styles.Navbar_list}>
-                <ul>
-                    <li><Link to="/" className={Styles.active}>Home</Link></li>
-                    <li><Link to="/Movies">Movies</Link></li>
-                    <li><Link to="/TVShows">Tv Shows</Link></li>
-                    <li><Link to="/Watchlist">Watchlist</Link></li>
-                    <li><Link to="/Genres">Genres</Link></li>
+                <ul ref={ul}>
+                    <li><Link to="/" className={Styles['item_link']}>Home</Link></li>
+                    <li><Link to="/Movies" className={Styles['item_link']}>Movies</Link></li>
+                    <li><Link to="/TVShows" className={Styles['item_link']}>Tv Shows</Link></li>
+                    <li><Link to="/Watchlist" className={Styles['item_link']}>Watchlist</Link></li>
+                    <li><Link to="/Genres" className={Styles['item_link']}>Genres</Link></li>
                 </ul>
             </div>
             
