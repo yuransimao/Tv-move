@@ -6,12 +6,12 @@ import {TvShows} from"../Pages/TvShows/tvshows"
 import {Watchlist} from"../Pages/Watchlist/watchlis"
 import {Genres} from"../Pages/Genres/genres"
 import {Search} from"../Pages/Search/search"
-import {Navbar} from "../Components/NavBar/navbar"
+import {Layout} from "../Components/Layout/Layout"
 
 export function Routers (){
     return(
         <BrowserRouter>
-        <Navbar/>
+        <Layout/>
         <div className={Styles.Container}>
         <Routes>
             <Route path="/" element={<Home/>}/>
