@@ -1,10 +1,14 @@
 import Styles from "./Styles.module.scss"
 import {RxCross2} from"react-icons/rx"
 
-export function SubMenu(){
+interface SubMenuprops{
+    children?:any
+    setvisivel?: () => void
+}
+export function SubMenu(props : SubMenuprops){
     return(
         <div className={Styles['Submenu']}>
-            <button><RxCross2/></button>
+            <button onClick={props.setvisivel}><RxCross2/></button>
            <div className={Styles['menu']}>
         
            </div>

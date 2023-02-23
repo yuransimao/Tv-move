@@ -7,8 +7,8 @@ export function Layout(){
     const [visivel , setVisivel] = useState(false)
     return(
         <div className= {Styles['Layout']}>
-            <Navbar />
-           {visivel === true ? <SubMenu/> : false}
+            <Navbar setvisivel={() => setVisivel(true)}/>
+           {visivel === true ? <SubMenu setvisivel={()=> setVisivel(false)}/> : false}
         </div>
     )
 }
