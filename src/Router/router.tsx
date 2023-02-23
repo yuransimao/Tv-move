@@ -5,6 +5,7 @@ import {Movies} from"../Pages/Movies/movies"
 import {TvShows} from"../Pages/TvShows/tvshows"
 import {Watchlist} from"../Pages/Watchlist/watchlis"
 import {Genres} from"../Pages/Genres/genres"
+import {Synopsis} from"../Pages/Synopsis/synopsis"
 import {Search} from"../Pages/Search/search"
 import {Layout} from "../Components/Layout/Layout"
 
@@ -19,7 +20,8 @@ export function Routers (){
             <Route path="/TvShows" element={<TvShows/>}/>
             <Route path="/Watchlist" element={<Watchlist/>}/>
             <Route path="/Genres" element={<Genres/>}/>
-            <Route path="/Search" element={<Search/>}/>
+            <Route path="movie/:id" element={<Synopsis/>}/>
+            <Route path="Search" element={<Search/>}/>
         </Routes>
         </div>
         </BrowserRouter>

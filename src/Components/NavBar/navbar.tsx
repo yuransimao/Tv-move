@@ -20,7 +20,6 @@ interface NavBarprops{
 export function Navbar( props : NavBarprops) {
        const ul = useRef<HTMLUListElement>(null)
     
-    console.log(ul.current?.classList.contains(Styles['item_link']))
     
    
     return (
