@@ -14,7 +14,7 @@ export function Card({movie}){
     return (
         <div className={Styles['movie-card']}>
             <img src={imgUrl + movie.poster_path} alt={movie.title}/>
-            <Link to= {`movie/${movie.id}`} >Detalhes</Link>
+            <Link to= {`Synopsis/${movie.id}`} >Detalhes</Link>
         </div>
     )
 }

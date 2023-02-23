@@ -20,7 +20,7 @@ export function Routers (){
             <Route path="/TvShows" element={<TvShows/>}/>
             <Route path="/Watchlist" element={<Watchlist/>}/>
             <Route path="/Genres" element={<Genres/>}/>
-            <Route path="movie/:id" element={<Synopsis/>}/>
+            <Route path="Synopsis/:id" element={<Synopsis/>}/>
             <Route path="Search" element={<Search/>}/>
         </Routes>
         </div>
