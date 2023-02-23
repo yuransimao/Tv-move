@@ -1,37 +1,86 @@
 @import '../../Styles/import';
+
 .Submenu{
-    height: 100%;
-    width: 100%;
-    background-color: rgba(31, 31, 31, 0.151);
-    position:absolute;
-    top:0;
-    z-index: 100;
-    
-    
-    animation:fadeUp .4s linear ;
-    .menu{
-        position: relative;
-        background-color: rgb(255, 255, 255);
-        height:89.7%;
-        width: 20%;
-        top:2.6rem;
-        border-radius: 0 4px ;
-        box-shadow: $box-shadow;
-    }
-    button{
-        color:#000;
-        font-size: 1.5rem;
-        position: relative;
-        left: 60rem;
-        top:5rem;
-        cursor: pointer;
-    }
+display: flex;
+justify-content: space-between;
+background-color:$SubMenu;
+animation:fadeUp .4s linear ;
+overflow:hidden ;
+position:absolute;
+top:0;
+height: 100%;
+width: 100%;
+z-index: 100;
+
+.menu{
+position: relative;
+background-color: rgb(255, 255, 255);
+max-height:89.6%;
+width: 20%;
+top:4.5rem;
+border-radius: 0 4px  4px 0;
+box-shadow: $box-shadow;
+}
+
+.btn{
+position: relative;
+top: 5rem;
+order: 2;
+
+
+button{
+padding: 0 1rem;
+color:#000;
+font-size: 1.5rem;
+cursor: pointer;
+transition: all .3s ease;
+
+&:hover{
+color:$color-hover;
+}
+
+}
+
+}
 }
 
 
 @keyframes fadeUp{
-    0%{
-        transform:translateX(-5rem);
-        opacity:0;
-    }
+0%{
+transform:translateX(-5rem);
+opacity:0;
+}
+}
+
+
+//Responsive
+@media (max-width:750px){
+.Submenu{
+.menu{
+max-height:79.1%;
+
+box-shadow: none;
+}
+}
+}
+@media (max-width:600px){
+.Submenu{
+justify-content: initial;
+
+.btn{
+top: 1.5rem;
+left:-4rem;
+width: 1%;
+}
+
+.menu{
+top:4.5rem;
+max-height:80%;
+width: 100%;
+box-shadow: none;
+border-radius: 0 0px  0px 0;
+
+}
+
+}
 }
