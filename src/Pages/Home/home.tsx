@@ -1,4 +1,6 @@
 import {useState , useEffect} from "react"
+import { Card } from "../../Components/Card/card";
+import Styles from "./styles.module.scss"
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -20,9 +22,9 @@ useEffect(()=>{
 },[])
     
     return (
-    <div>
+    <div className={Styles['home_container']}>
         <h1>Home</h1>
-        {topMovies.map((movie:any) => <p>{movie.title}</p> )}
+        {topMovies.map((movie:any) => <Card key={movie.id} movie={movie}/> )}
     </div>
     )
 }
