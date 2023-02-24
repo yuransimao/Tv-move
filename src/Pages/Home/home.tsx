@@ -1,6 +1,17 @@
 import {useState , useEffect} from "react"
 import { Card } from "../../Components/Card/card";
 import Styles from "./styles.module.scss"
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { FreeMode, Pagination } from "swiper";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
