@@ -13,7 +13,7 @@ interface Cardprops{
 export function Card({movie}){
     return (
         
-            <motion.div className={Styles['item']}>
+            
                 <div className={Styles['movie-card']}>
                     <div className={Styles['card_Img']}>
                         <img src={imgUrl + movie.poster_path} alt={movie.title}/>
@@ -23,7 +23,7 @@ export function Card({movie}){
                         <Link to= {`Synopsis/${movie.id}`}> <AiOutlinePlayCircle  /></Link>
                     </div>
                 </div>
-            </motion.div>
+            
         
     )
 }
