@@ -1,50 +1,16 @@
-.movie-card{
-max-height: 40%;
-min-width: 24.3%;
+.item{
+    min-height: 50%;
+    min-width: 40%;
 
-.card_Img{
-position: relative;
-z-index: 1;
-filter: blur(1px);
-
-img{
-border-radius: 4%;
-max-width: 100%;
-object-fit: cover;
-}
-
-&:hover{
-    filter: blur(4px);
-    cursor: pointer;
-.btn{
-visibility: none;
-}
-}
-}
-
-.btn{
-visibility: hidden;
-position: relative;
-z-index: 2;
-top:-10rem;
-min-height: 50%;
-
-
-a{
-&:nth-child(1){
-position: relative;
-top: -19rem;
-right: 3rem;
-color: rgb(190, 114, 0);
-}
-&:nth-child(2){
-position: absolute;
-top: -8rem;
-left: 7rem;
-font-size: 5rem;
-color: blanchedalmond;
-}
-
-}
-}
+    
+   .movie-card{
+   min-width: 60%;
+   .card_Img{
+    max-width: 50%;
+    img{
+       max-width: 100%; 
+       object-fit: cover;
+    }
+   } 
+   }
 }
