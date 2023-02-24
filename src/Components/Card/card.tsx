@@ -13,8 +13,13 @@ interface Cardprops{
 export function Card({movie}){
     return (
         <div className={Styles['movie-card']}>
-            <img src={imgUrl + movie.poster_path} alt={movie.title}/>
-            <Link to= {`Synopsis/${movie.id}`} >Detalhes</Link>
+            <div className={Styles['card_Img']}>
+                <img src={imgUrl + movie.poster_path} alt={movie.title}/>
+            </div>
+            <div className={Styles['btn']}>
+                <Link to= {`Synopsis/${movie.id}`}> <BsFillInfoCircleFill/></Link>
+                <Link to= {`Synopsis/${movie.id}`}> <AiOutlinePlayCircle/></Link>
+            </div>
         </div>
     )
 }
