@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { BsFillInfoCircleFill } from "react-icons/bs"
 import { AiOutlinePlayCircle } from "react-icons/ai"
 import Styles from "./styles.module.scss"
-import { Swiper, SwiperSlide } from "swiper/react";
+
 
 const imgUrl = import.meta.env.VITE_IMG
 
@@ -10,7 +10,7 @@ interface Cardprops {
     id: number
     img: string
 }
-export function Cards(props: Cardprops) {
+export function CardR(props: Cardprops) {
 
     return (
         <div className={Styles.moviecard} >

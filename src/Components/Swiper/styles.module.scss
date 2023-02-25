@@ -1,13 +1,22 @@
-.mySwiper {
-  display: flex;
-    max-width: 100%;
-   
-  }
 
-  .SwiperSlide{
-    width: 40%;
+.swiper {
+  width: 100%;
+  height: 50%;
+  gap: 2%;
+}
 
-  }
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
   
   
   
