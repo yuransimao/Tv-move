@@ -26,6 +26,9 @@ export  function Swipers(props : SwiperProps) {
   return (
 
     <>
+    <div  className={Styles['text']}>
+      <h1>Top Movie</h1><hr />
+    </div>
     <Swiper
     effect={"coverflow"}
     grabCursor={true}
@@ -42,7 +45,7 @@ export  function Swipers(props : SwiperProps) {
     modules={[EffectCoverflow, Pagination]}
     className={Styles['swiper']}
   >
-   
+         
        
         <SwiperSlide className={Styles['swiper-slide']}>
         <Cards  img={img[0]} id={id[0]}/>

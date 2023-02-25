@@ -9,8 +9,9 @@ import "swiper/css/pagination";
 import Styles from"./swiperslidet.module.scss";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import { CardR } from "../Card/CardR/CardR";
+
 
 interface SwiperProps{
 
@@ -23,12 +24,17 @@ export function Swipert(props : SwiperProps) {
    const id = props.id
   return (
     <>
+   
       <Swiper
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay,Pagination]}
         className={Styles["mySwiper"]}
       >
         <SwiperSlide className={Styles["swiper-slide"]}> 

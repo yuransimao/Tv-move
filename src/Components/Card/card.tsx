@@ -9,10 +9,13 @@ const imgUrl = import.meta.env.VITE_IMG
 interface Cardprops {
     id: number
     img: string
+    
 }
 export function Cards(props: Cardprops) {
 
     return (
+        <>
+        
         <div className={Styles.moviecard} >
 
 
@@ -25,7 +28,7 @@ export function Cards(props: Cardprops) {
             </div>
 
         </div>
-
+        </>
 
     )
 }
