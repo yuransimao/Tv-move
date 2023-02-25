@@ -1,7 +1,8 @@
 import {useState , useEffect} from "react"
 import { Card } from "../../Components/Card/card";
+import { Swipers} from "../../Components/Swiper/swiper";
 import Styles from "./styles.module.scss"
-import {motion} from "framer-motion"
+
 
 
 
@@ -23,13 +24,25 @@ useEffect(()=>{
     getTopMovies(topUrl)
 
 },[])
-    
+const poster_path = topMovies.map((movies , array)=> {
+    const poster_path = movies.poster_path
+
+    return poster_path
+})
+const id = topMovies.map((movies)=> {
+    const id = movies.id
+
+    return id
+})
+  console.log(poster_path[0], id[0])
     return (
+   
     <div className={Styles['home_container']}>
         <h1>Home</h1>
-        
-        <div className={Styles['home_card']}>{topMovies.map((movie:any) => <Card key={movie.id} movie={movie}/> )}
+        <div className={Styles['home_card']}>
+        <Swipers topMovies ={topMovies} poster_path={poster_path} id={id}/>
         </div>
     </div>
+  
     )
 }

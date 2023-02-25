@@ -1,29 +1,31 @@
 import { Link } from "react-router-dom"
-import {BsFillInfoCircleFill} from "react-icons/bs"
-import {AiOutlinePlayCircle} from "react-icons/ai"
+import { BsFillInfoCircleFill } from "react-icons/bs"
+import { AiOutlinePlayCircle } from "react-icons/ai"
 import Styles from "./styles.module.scss"
-import {motion} from "framer-motion"
+import { Swiper, SwiperSlide } from "swiper/react";
+
 const imgUrl = import.meta.env.VITE_IMG
 
-interface Cardprops{
-    movie?:string;
-    poster_path?:String
-    title?: String
+interface Cardprops {
+    id: any
+    img: any
 }
-export function Card({movie}){
+export function Card(props: Cardprops) {
+
     return (
-        
-            
-                <div className={Styles['movie-card']}>
-                    <div className={Styles['card_Img']}>
-                        <img src={imgUrl + movie.poster_path} alt={movie.title}/>
-                    </div>
-                    <div className={Styles['btn']}>
-                        <Link to= {`Synopsis/${movie.id}`}> <BsFillInfoCircleFill/></Link>
-                        <Link to= {`Synopsis/${movie.id}`}> <AiOutlinePlayCircle  /></Link>
-                    </div>
-                </div>
-            
-        
+        <div className={Styles.moviecard} >
+
+
+            <div className={Styles['card_Img']}>
+                <img src={imgUrl + `${props.img}`} alt={'filme'}/>
+            </div>
+            <div className={Styles['btn']}>
+                <Link to={`Synopsis/${props.id}`}> <BsFillInfoCircleFill /></Link>
+                <Link to={`Synopsis/${props.id}`}> <AiOutlinePlayCircle /></Link>
+            </div>
+
+        </div>
+
+
     )
 }
