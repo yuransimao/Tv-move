@@ -16,6 +16,14 @@
 html{
     height:100vh;
     width:100vw;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+   
+
+
+
 }
 
 
@@ -25,3 +33,8 @@ body{
 }
 
 
+@media(max-width:900px){
+    html{
+        font-size:55%;
+    }
+}

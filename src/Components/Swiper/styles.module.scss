@@ -5,16 +5,17 @@ margin-top: 1.5rem;
 align-items: center;
 
 
+
 h1{
 font-weight: 600;
 font-size: 1.5rem;
 }
 hr{
-
-height: 3px;
-font-size: 1rem;
-background: black;
-border:2px solid black;
+margin-left: 0.8rem;
+height: 1px;
+font-size: 0.5rem;
+background: rgba(36, 36, 36, 0.473);
+border:1px solid rgba(36, 36, 36, 0.473);
 border-radius: 50%;
 width: 80%;
 }
