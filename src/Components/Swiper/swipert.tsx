@@ -38,16 +38,16 @@ export function Swipert(props : SwiperProps) {
         className={Styles["mySwiper"]}
       >
         <SwiperSlide className={Styles["swiper-slide"]}> 
-        <CardR img={img[10]} id={id[10]}/>
+        <CardR img={img[13]} id={id[13]}/>
         </SwiperSlide>
         <SwiperSlide className={Styles["swiper-slide"]}> 
         <CardR img={img[2]} id={id[2]}/>
         </SwiperSlide>
         <SwiperSlide className={Styles["swiper-slide"]}> 
-        <CardR img={img[5]} id={id[5]}/>
+        <CardR img={img[3]} id={id[3]}/>
         </SwiperSlide>
         <SwiperSlide className={Styles["swiper-slide"]}> 
-        <CardR img={img[17]} id={id[17]}/>
+        <CardR img={img[1]} id={id[1]}/>
         </SwiperSlide>
         
       </Swiper>
