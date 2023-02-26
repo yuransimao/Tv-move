@@ -17,3 +17,23 @@
     max-width: 100%;
     object-fit: cover;
   }
+
+
+  @media screen and (max-width:750px), screen and (max-height:687px){
+    .mySwiper {
+      margin-top: 0.2rem;
+      max-height: 40vh;
+  
+    }
+
+
+  }
+  @media screen and (max-width:500px), screen and (max-height:687px){
+    .mySwiper {
+      margin-top: 0.2rem;
+      max-height: 30vh;
+  
+    }
+
+
+  }

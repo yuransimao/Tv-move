@@ -31,6 +31,7 @@ export  function Swipers(props : SwiperProps) {
     </div>
     <Swiper
     effect={"coverflow"}
+    spaceBetween={20}
     grabCursor={true}
     centeredSlides={false}
     slidesPerView={"auto"}
