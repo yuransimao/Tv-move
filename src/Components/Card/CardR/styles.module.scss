@@ -19,10 +19,14 @@ height: 80vh;
 }
 }
 .btn{
-    top:0;
+    top:25rem;
+    left:3rem;
     z-index: 4;
     position: absolute;
-    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
 }
 }
 @media screen and (max-width:750px), screen and (max-height:680px){

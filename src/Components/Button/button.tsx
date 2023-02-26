@@ -10,7 +10,7 @@ interface Buttonprops{
 export function Button(props : Buttonprops){
 
     return(
-        <Link to={props.to} className={Styles[props.background]}>{props.title}</Link>
+        <Link to={props.to} className={`${Styles['button']} ${Styles[props.background]}`}>{props.title}</Link>
 
     )
 
