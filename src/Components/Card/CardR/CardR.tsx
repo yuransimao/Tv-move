@@ -19,7 +19,7 @@ export function CardR(props: Cardprops) {
                 <img src={imgUrl + `${props.img}`} alt={'filme'}/>
             </div>
             <div className={Styles['btn']}>
-                <Button to={`Synopsis/${props.id}`} title={"Watch Now"} />
+                <Button to={`Synopsis/${props.id}`} title={"Watch Now"} background={'Backgroundred'}/>
                 
             </div>
 
