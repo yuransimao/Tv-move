@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom"
-import { BsFillInfoCircleFill } from "react-icons/bs"
-import { AiOutlinePlayCircle } from "react-icons/ai"
+
+import { Button } from "../../Button/button"
 import Styles from "./styles.module.scss"
 
 
@@ -20,8 +19,8 @@ export function CardR(props: Cardprops) {
                 <img src={imgUrl + `${props.img}`} alt={'filme'}/>
             </div>
             <div className={Styles['btn']}>
-                <Link to={`Synopsis/${props.id}`}> <BsFillInfoCircleFill /></Link>
-                <Link to={`Synopsis/${props.id}`}> <AiOutlinePlayCircle /></Link>
+                <Button to={`Synopsis/${props.id}`} title={"Watch Now"} />
+                
             </div>
 
         </div>
