@@ -43,11 +43,11 @@ export  function Swipers(props : SwiperProps) {
       },
       600: {
         slidesPerView: 3,
-        spaceBetween: 0,
+        spaceBetween: 2,
       },
       640: {
         slidesPerView: 4,
-        spaceBetween: 0,
+        spaceBetween: 2,
       },
       768: {
         slidesPerView: 4,

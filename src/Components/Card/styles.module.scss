@@ -16,7 +16,7 @@ z-index: 1;
 transition: .3s linear;
 
 &:hover{
-filter: blur(4px);
+
 }
 
 img{
@@ -32,7 +32,7 @@ object-fit: cover;
 
 
 &:hover{
-
+transform: scale(1.2);
 cursor: pointer;
 .btn{
 visibility:visible;
