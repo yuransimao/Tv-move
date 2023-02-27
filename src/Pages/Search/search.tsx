@@ -26,10 +26,11 @@ export function Search() {
     }, [query])
     console.log(search)
     return (
-        <>
-        <h1>{query}</h1>
+        <div className={Styles['Search']}>
+            {search.length > 0  ?(
+        <h1><span>Resultado da Pesquisa : </span>{query}</h1>) : <h1> Not items : <span>{query}</span></h1> }
         <div className={Styles['moviecontainer']}>{search.map((movie : any)=> <CardSearch key={movie.id} movie ={movie}/>)}
         </div>
-        </>
+        </div>
     )
 }

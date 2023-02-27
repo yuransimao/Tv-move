@@ -4,8 +4,9 @@
 .moviecard{
     min-height: calc(150px * 1.5);
     height: calc(150px * 1.5);
-    width: 85%;
+    max-width: 28%;
     transition: .3s linear;
+
     
     
     border-radius: 4%;

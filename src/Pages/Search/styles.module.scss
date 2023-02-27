@@ -1,7 +1,13 @@
+
+.Search{
+    padding: 4rem;
+}
 .moviecontainer{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap:wrap;
-    width:100vw;
-    gap:3%;
-    padding: 1rem;
+    width:100%;
+    margin-bottom: 12px;
+    gap: 3%;
 }
