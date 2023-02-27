@@ -16,7 +16,7 @@ import { CardR } from "../Card/CardR/CardR";
 interface SwiperProps{
 
     id: any
-    poster_path?: any
+    poster_path: any
   }
 
 export function Swipert(props : SwiperProps) {

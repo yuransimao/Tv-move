@@ -1,4 +1,5 @@
-import {useState , useEffect} from "react"
+import {useState , useEffect } from "react"
+
 import { Swipers} from "../../Components/Swiper/swiper";
 import { Swipert} from "../../Components/Swiper/swipert";
 import Styles from "./styles.module.scss"
@@ -35,12 +36,12 @@ const id = topMovies.map((movies:any)=> {
     return id
 })
   
-console.log(topMovies)
+
     return (
    
     <div className={Styles['home_container']}>
         
-        {id.length && poster_path.length === 0 && <p>Carregando</p> }
+        
         <Swipert poster_path={poster_path} id={id}/>
         
         <Swipers  poster_path={poster_path} id={id}/>

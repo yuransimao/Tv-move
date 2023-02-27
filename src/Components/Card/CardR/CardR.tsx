@@ -23,12 +23,13 @@ export function CardR(props: Cardprops) {
     }
 
     useEffect(()=>{
-        const Synopsis = `${moviesURL}${props.id}?${apiKey}`
+        const Synopsis = props.id && `${moviesURL}${props.id}?${apiKey}`
         getSynopsis(Synopsis)
         
-    },[])
-
-    console.log(Synopsis)
+        
+    },[props.id])
+    
+   
     return (
         <div className={Styles.moviecard} >
 
@@ -36,10 +37,13 @@ export function CardR(props: Cardprops) {
             <div className={Styles['card_Img']}>
                 <img src={imgUrl + `${props.img}`} alt={'filme'}/>
             </div>
-            <div className={Styles['btn']}>
-                <p>{Synopsis}</p>
-                <Button to={`Synopsis/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
-                <Button to={`Synopsis/${props.id}`} title={"Add to watchlist"} background={'BackgroundTransp'}/>
+            <div className={Styles['Synops']}>
+                <p>{Synopsis.slice(0, 79.5)}...</p>
+                </div>
+                <div className={Styles['btn']}>
+                
+                    <Button to={`Synopsis/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
+                    <Button to={`Synopsis/${props.id}`} title={"Add to watchlist"} background={'BackgroundTransp'}/>
                 
             </div>
 
