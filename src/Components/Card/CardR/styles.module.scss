@@ -15,18 +15,18 @@ z-index: 1;
 
 img{
 width: 100%;
-height: 80vh;
+height: calc(100vh/2.6);
 }
 }
 .btn{
-    top:45rem;
+    top:25rem;
     left:3rem;
     z-index: 4;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 25%;
+    width: 19%;
 }
 }
 @media screen and (max-width:750px), screen and (max-height:680px){
@@ -37,7 +37,7 @@ img{
 
 
 width: 100%;
-height: 100%;
+height: 60%vh;
 
 }
 

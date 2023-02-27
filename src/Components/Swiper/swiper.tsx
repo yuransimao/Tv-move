@@ -30,8 +30,23 @@ export  function Swipers(props : SwiperProps) {
       <h1>Top Movie</h1><hr />
     </div>
     <Swiper
-    slidesPerView={3}
+    slidesPerView={1}
+    
     pagination={false}
+    breakpoints={{
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 8,
+        spaceBetween: 10,
+      },
+    }}
     modules={[Pagination]}
     
     className={Styles['swiper']}
