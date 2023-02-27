@@ -31,16 +31,27 @@ export  function Swipers(props : SwiperProps) {
     </div>
     <Swiper
     slidesPerView={1}
-    
     pagination={false}
     breakpoints={{
+      500: {
+        slidesPerView: 3,
+        spaceBetween: 2,
+      },
+      540: {
+        slidesPerView: 3,
+        spaceBetween: 2,
+      },
+      600: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
       640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 4,
+        spaceBetween: 0,
       },
       768: {
         slidesPerView: 4,
-        spaceBetween: 40,
+        spaceBetween: 10,
       },
       1024: {
         slidesPerView: 8,
