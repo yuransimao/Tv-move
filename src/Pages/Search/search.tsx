@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { Cards } from "../../Components/Card/card"
-
+import {CardSearch} from "../../Components/Card/CardSearch/CardSearch"
+import Styles from "./styles.module.scss"
 const SearchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -28,7 +28,8 @@ export function Search() {
     return (
         <>
         <h1>{query}</h1>
-        {search.map((movie : any)=> <Cards key={movie.id} move ={movie}/>)}
+        <div className={Styles['moviecontainer']}>{search.map((movie : any)=> <CardSearch key={movie.id} movie ={movie}/>)}
+        </div>
         </>
     )
 }
