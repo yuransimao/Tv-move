@@ -30,20 +30,10 @@ export  function Swipers(props : SwiperProps) {
       <h1>Top Movie</h1><hr />
     </div>
     <Swiper
-    effect={"coverflow"}
-    spaceBetween={20}
-    grabCursor={true}
-    centeredSlides={false}
-    slidesPerView={"auto"}
-    coverflowEffect={{
-      rotate: 0,
-      stretch: 0,
-      depth: 300,
-      modifier: 1,
-      slideShadows: false,
-    }}
+    slidesPerView={3}
     pagination={false}
-    modules={[EffectCoverflow, Pagination]}
+    modules={[Pagination]}
+    
     className={Styles['swiper']}
   >
          
