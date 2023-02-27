@@ -1,5 +1,6 @@
 
 import { Button } from "../../Button/button"
+import { AiFillStar } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import Styles from "./styles.module.scss"
 
@@ -14,11 +15,15 @@ interface Cardprops {
 }
 export function CardR(props: Cardprops) {
     const [Synopsis , setSynopsis] = useState([])
+    const [star, setStar] = useState('')
+    const [title, setTitle] = useState('')
 
     const getSynopsis = async (url:any) => {
         const res = await fetch(url)
         const data = await res.json()
         setSynopsis(data.overview)
+        setStar(data.vote_average)
+        setTitle(data.title)
 
     }
 
@@ -29,7 +34,7 @@ export function CardR(props: Cardprops) {
         
     },[props.id])
     
-   
+   console.log(star)
     return (
         <div className={Styles.moviecard} >
 
@@ -37,14 +42,22 @@ export function CardR(props: Cardprops) {
             <div className={Styles['card_Img']}>
                 <img src={imgUrl + `${props.img}`} alt={'filme'}/>
             </div>
-            <div className={Styles['Synops']}>
-                <p>{Synopsis.slice(0, 79.5)}...</p>
+            <div className={Styles['container']}>
+                    <div className={Styles['title']}>
+                        <h1>{title}</h1>
+                    </div>
+                <div className={Styles['Star']}>
+                    <p><AiFillStar/><span>{Number(star).toFixed(1)}</span></p>
+                    </div>
+                <div className={Styles['Synops']}>
+                    <p className={Styles['text']}>{Synopsis.slice(0, 45)}...</p>
+                    </div>
+                    <div className={Styles['btn']}>
+                
+                        <Button to={`Synopsis/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
+                        <Button to={`Synopsis/${props.id}`} title={"Add to watchlist"} background={'BackgroundTransp'}/>
+                
                 </div>
-                <div className={Styles['btn']}>
-                
-                    <Button to={`Synopsis/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
-                    <Button to={`Synopsis/${props.id}`} title={"Add to watchlist"} background={'BackgroundTransp'}/>
-                
             </div>
 
         </div>
