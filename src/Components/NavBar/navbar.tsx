@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { FiMenu } from "react-icons/fi"
 import { BiSearch,BiMoviePlay} from "react-icons/bi"
 import Styles from "./styles.module.scss"
@@ -19,6 +19,17 @@ interface NavBarprops{
 
 export function Navbar( props : NavBarprops) {
        const ul = useRef<HTMLUListElement>(null)
+       const [Search , setSearch] =useState('')
+        const Navigate = useNavigate()
+       const handleSearch = (e : any) => {
+        e.preventDefault()
+        if(!Search) return;
+        
+        Navigate(`/Search?q=${Search}`)
+        setSearch('')
+        
+
+       } 
     
     
    
@@ -49,10 +60,10 @@ export function Navbar( props : NavBarprops) {
                     </ul>
                 </div>
             
-            <form>
+            <form onSubmit={handleSearch}>
         <div className={Styles.search_box}>
             <button className={Styles.search_btn}><BiSearch/></button>
-            <input type="search" placeholder="Search"/>
+            <input type="search" placeholder="Search" value={Search} onChange={(e) => setSearch(e.target.value)}/>
         </div>
     </form>
             </div>

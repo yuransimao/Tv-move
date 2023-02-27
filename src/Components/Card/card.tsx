@@ -7,8 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const imgUrl = import.meta.env.VITE_IMG
 
 interface Cardprops {
-    id: number
-    img: string
+    id?: number
+    img?: string
+    move?:any
     
 }
 export function Cards(props: Cardprops) {

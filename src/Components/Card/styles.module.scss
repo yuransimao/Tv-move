@@ -45,22 +45,25 @@ transition: .3s linear;
 visibility: hidden;
 position: relative;
 z-index: 2;
-top:-5rem;
-
+top:calc(150px - 20rem);
+display: flex;
+align-items: center;
+justify-content: center;
 
 
 
 a{
 &:nth-child(1){
 position: relative;
-top: -17rem;
-right: -14rem;
+top: calc(150px - 32rem);
+right: calc(85% - 17rem);
 color: rgb(190, 114, 0);
+font-size: 1.4rem;
 }
 &:nth-child(2){
 position: absolute;
 top: -8rem;
-left: 7rem;
+
 font-size: 5rem;
 color: rgb(255, 255, 255);
 }
