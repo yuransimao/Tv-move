@@ -35,10 +35,12 @@ const id = topMovies.map((movies:any)=> {
     return id
 })
   
+console.log(topMovies)
     return (
    
     <div className={Styles['home_container']}>
         
+        {id.length && poster_path.length === 0 && <p>Carregando</p> }
         <Swipert poster_path={poster_path} id={id}/>
         
         <Swipers  poster_path={poster_path} id={id}/>
