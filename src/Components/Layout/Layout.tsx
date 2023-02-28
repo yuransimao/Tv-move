@@ -1,16 +1,17 @@
 import { Navbar } from "../NavBar/navbar"
 import Styles from "./Styles.module.scss";
 import { SubMenu } from "../SubMenu/submenu";
-import {useState} from "react"
 import { Outlet } from "react-router-dom";
+import { Visivel } from "../../Hooks/useVisivel";
 
 export function Layout(){
-    const [visivel , setVisivel] = useState(false)
+    const {visivel , setVisivel, VisivelSubmen } = Visivel()
+   
     return(
         <div className= {Styles['Layout']}>
             <Navbar setvisivel={() => setVisivel(true)}/>
             <Outlet/>
-           {visivel === true ? <SubMenu setvisivel={()=> setVisivel(false)}/> : false}
+           {VisivelSubmen ? <SubMenu setvisivel={()=> setVisivel(false)}/> : false}
         </div>
     )
 }
