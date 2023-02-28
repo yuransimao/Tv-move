@@ -1,12 +1,12 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { FiMenu } from "react-icons/fi"
 import { BiSearch,BiMoviePlay} from "react-icons/bi"
 import Styles from "./styles.module.scss"
-import {useState, useRef} from 'react'
 import {AiOutlineHome} from "react-icons/ai"
 import {FaThList} from "react-icons/fa"
 import {TbMovie}from "react-icons/tb"
 import {CiStreamOn}from "react-icons/ci"
+import { getSearch } from "../../Hooks/useSearch"
 
 interface NavBarprops{
     children?:any
@@ -18,18 +18,8 @@ interface NavBarprops{
 
 
 export function Navbar( props : NavBarprops) {
-       const ul = useRef<HTMLUListElement>(null)
-       const [Search , setSearch] =useState('')
-        const Navigate = useNavigate()
-       const handleSearch = (e : any) => {
-        e.preventDefault()
-        if(!Search) return;
-        
-        Navigate(`/Search?q=${Search}`)
-        setSearch('')
-        
-
-       } 
+      const { handleSearch, Search, setSearchs} = getSearch()
+       
     
     
    
@@ -42,7 +32,7 @@ export function Navbar( props : NavBarprops) {
             </div>
 
             <div className={Styles['Navbar_list']}>
-                <ul ref={ul}>
+                <ul >
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/Movies">Movies</Link></li>
                     <li><Link to="/TVShows">Tv Shows</Link></li>
@@ -51,7 +41,7 @@ export function Navbar( props : NavBarprops) {
                 </ul>
             </div>
                 <div className={Styles['Responsive_listItem']}>
-                    <ul ref={ul}>
+                    <ul >
                         <li><Link to="/"><AiOutlineHome/></Link></li>
                         <li><Link to="/Movies"><BiMoviePlay/></Link></li>
                         <li><Link to="/TVShows"><CiStreamOn/></Link></li>
@@ -63,7 +53,7 @@ export function Navbar( props : NavBarprops) {
             <form onSubmit={handleSearch}>
         <div className={Styles.search_box}>
             <button className={Styles.search_btn}><BiSearch/></button>
-            <input type="search" placeholder="Search" value={Search} onChange={(e) => setSearch(e.target.value)}/>
+            <input type="search" placeholder="Search" value={Search} onChange={(e) => setSearchs(e.target.value)}/>
         </div>
     </form>
             </div>
