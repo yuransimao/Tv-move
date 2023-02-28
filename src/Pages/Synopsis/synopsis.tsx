@@ -1,26 +1,34 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect} from "react";
-
+import { CardS } from "../../Components/Card/CardSynop/CardS";
+import Styles from "./styles.module.scss"
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 export function Synopsis(){
-    const [movie , setMovies] = useState([])
+    const [movies , setMovies] = useState([])
     const {id} = useParams() 
 
-    const getSynopsis = async (url : any) =>{
+    const getSynops = async (url : any) =>{
         const res = await fetch(url)
         const data = await res.json()
         
-        setMovies(data.results)
+        setMovies(data)
+           
     }
     
     useEffect(() =>{
-        const SynopsisURL = id && `${moviesURL}${id}?${apiKey}`
-        getSynopsis(SynopsisURL)
-        
-        
+        const SynopsisURL =  `${moviesURL}${id}?${apiKey}`
+        getSynops(SynopsisURL)
     },[id])
-    console.log(movie)
-    return <h1>Synopsis</h1>
+    
+    console.log(typeof movies)
+    return (
+        <div className={Styles['synops']}>
+       
+        <div className={Styles['Synops-Card']}>
+           {movies &&  <CardS movie={movies}/>}
+        </div>
+        </div>
+    )
 }
