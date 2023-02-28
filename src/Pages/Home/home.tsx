@@ -1,7 +1,7 @@
 
 
-import { Swipers} from "../../Components/Swiper/swiper";
-import { Swipert} from "../../Components/Swiper/swipert";
+import { Swipers} from "../../Components/Slider/Swiper/swiper";
+import { Swipert} from "../../Components/Slider/Swiper/swipert";
 import Styles from "./styles.module.scss"
 import { TopMovies } from "../../Hooks/useTopMovies";
 

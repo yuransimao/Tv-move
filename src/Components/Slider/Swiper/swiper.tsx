@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-// Import Swiper React components
+
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,8 +9,8 @@ import "swiper/css/pagination";
 
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
-import { Cards } from "../Card/card";
+import { Pagination } from "swiper";
+import { Cards } from "../../Card/card";
 import Styles from"./styles.module.scss";
 
 

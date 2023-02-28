@@ -10,7 +10,7 @@ import Styles from"./swiperslidet.module.scss";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper";
-import { CardR } from "../Card/CardR/CardR";
+import { CardR } from "../../Card/CardR/CardR";
 
 
 interface SwiperProps{
