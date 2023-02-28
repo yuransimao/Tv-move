@@ -27,6 +27,9 @@ export function Synopsis(){
     
     const genres = movies?.genres
     const gener = genres?.map(g => g.name)
+    const production =movies?.production_companies
+    const production_companies =production?.map( p => p.name)
+
     console.log(gener)
         
     return (
@@ -37,9 +40,23 @@ export function Synopsis(){
         <div className={Styles['container_snops']}>
             {<CardSearch movie={movies}/>}
             <div className={'Synops-Text'}>
-                <h1>{movies?.title}</h1>
-                <p>{movies?.overview}</p>
-                <p>{gener}</p>
+                
+                <div className={Styles['Descricao']}>
+                    <h1>Synopsis</h1> <hr/>
+                    <p className={Styles['overview']}>{movies?.overview}</p>
+                </div>
+                <div className={Styles['Gener']}>
+                    <h2>Gener</h2>
+                    <p>{gener}</p>
+                </div>
+                <div className={Styles['Prodution']}>
+                    <h3>Production Companie</h3>
+                    <p>{production_companies}</p>
+                </div>
+                <div className={Styles['date']}>
+                    <h4>Date</h4>
+                    <p>{movies?.release_date}</p>
+                </div>
             </div>
         </div>
         </div>

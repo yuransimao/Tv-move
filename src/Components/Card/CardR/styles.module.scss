@@ -28,7 +28,7 @@ padding: 1rem ;
 top:calc(100vh/5);
 z-index: 4;
 .title{
-    top:calc(100vh/(-14));
+    top:calc(100vh/(-10));
 left:3rem;
 z-index: 4;
 position: relative;
@@ -38,7 +38,7 @@ color: white;
 
 }
 .Star{
-top:calc(100vh/(-17));
+top:calc(100vh/(-13));
 left:3rem;
 z-index: 4;
 position: relative;
@@ -61,16 +61,16 @@ span{
 }
 
 .Synops{
-top:calc(100vh/(-19));
+top:calc(100vh/(-15));
 left:3rem;
 z-index: 4;
 position: relative;
 display: flex;
 align-items: center;
 color: white;
-font-size: 1.5rem;
+font-size: 1.3rem;
 .text{
-width: 30%;
+width: 27%;
 text-align: justify;    
 }
 
@@ -84,7 +84,8 @@ position:relative;
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 19%;
+width: 25%;
+
 }
 }
 }

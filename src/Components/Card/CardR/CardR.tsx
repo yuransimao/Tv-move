@@ -34,7 +34,7 @@ export function CardR(props: Cardprops) {
         
     },[props.id])
     
-   console.log(star)
+   
     return (
         <div className={Styles.moviecard} >
 
@@ -50,7 +50,7 @@ export function CardR(props: Cardprops) {
                     <p><AiFillStar/><span>{Number(star).toFixed(1)}</span></p>
                     </div>
                 <div className={Styles['Synops']}>
-                    <p className={Styles['text']}>{Synopsis.slice(0, 45)}...</p>
+                    <p className={Styles['text']}>{Synopsis.slice(0, 95)}...</p>
                     </div>
                     <div className={Styles['btn']}>
                 
