@@ -16,11 +16,11 @@ export function CardSearch({movie}) {
 
 
             <div className={Styles['card_Img']}>
-                <img src={imgUrl + `${movie.poster_path}`} alt={'filme'}/>
+                <img src={imgUrl + `${movie?.poster_path}`} alt='filme'/>
             </div>
             <div className={Styles['btn']}>
-                <Link to={`Synopsis/${movie.id}`}> <BsFillInfoCircleFill /></Link>
-                <Link to={`Synopsis/${movie.id}`}> <AiOutlinePlayCircle /></Link>
+                <Link to={`Synopsis/${movie?.id}`}> <BsFillInfoCircleFill /></Link>
+                <Link to={`Synopsis/${movie?.id}`}> <AiOutlinePlayCircle /></Link>
             </div>
 
         </div>
