@@ -32,3 +32,8 @@ background: rgb(0, 0, 0);
 border: 2px solid rgb(0, 0, 0);
 }
 }
+@media screen and (max-width:699px), screen and (max-height:680px){
+    .BackgroundTransp{
+        min-width: 30%;
+    }
+}

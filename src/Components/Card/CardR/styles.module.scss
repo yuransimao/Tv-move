@@ -119,8 +119,8 @@ max-width: 25%;
   .btn{
     padding-right: 5rem;
     top:calc(100vh/(-8));
-    left:52rem;
-    max-width: 40%;
+    left:calc(100% - 35rem);
+    max-width: 48%;
     }
     .Synops{
       max-width: 100%;
@@ -137,11 +137,11 @@ max-width: 25%;
     .container{
   
       .btn{
-        
+        padding-right: 2.5rem;
         max-width: 60%;
         }
         .Synops{
-          max-width: 62%;
+          max-width: 100%;
         }
       }
 
@@ -165,6 +165,15 @@ max-width: 25%;
   
   .container{
     top:calc(100vh/8);
+    .Synops{
+     display: none;
+    }
+    .btn{
+      
+      top:calc(100vh/(-20));
+      left:calc(100% - 30rem);
+      max-width: 60%;
+      }
   }
   
   }
