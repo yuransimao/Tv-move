@@ -25,7 +25,7 @@ export function Cards(props: Cardprops) {
             </div>
             <div className={Styles['btn']}>
                 <Link to={`Synopsis/${props.id}`}> <BsFillInfoCircleFill /></Link>
-                <Link to={`Synopsis/${props.id}`}> <AiOutlinePlayCircle /></Link>
+                <Link to={`Video/${props.id}`}> <AiOutlinePlayCircle /></Link>
             </div>
 
         </div>

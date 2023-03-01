@@ -10,7 +10,7 @@ const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 
-export function CardS({movie}) {
+export function CardS({movie}:any) {
    
     
    
@@ -33,7 +33,7 @@ export function CardS({movie}) {
                     </div>
                     <div className={Styles['btn']}>
                 
-                        <Button to={`Synopsis/${movie.id}`} title={"Watch now"} background={'Backgroundred'}/>
+                        <Button to={`Video/${movie.id}`} title={"Watch now"} background={'Backgroundred'}/>
                         <Button to={`Synopsis/${movie.id}`} title={"Add to watchlist"} background={'BackgroundTransp'}/>
                 
                 </div>

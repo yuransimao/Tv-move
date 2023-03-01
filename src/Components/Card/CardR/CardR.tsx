@@ -54,7 +54,7 @@ export function CardR(props: Cardprops) {
                     </div>
                     <div className={Styles['btn']}>
                 
-                        <Button to={`Synopsis/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
+                        <Button to={`Video/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
                         <Button to={`Synopsis/${props.id}`} title={"Add to watchlist"} background={'BackgroundTransp'}/>
                 
                 </div>

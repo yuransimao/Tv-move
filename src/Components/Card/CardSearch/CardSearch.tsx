@@ -26,7 +26,7 @@ export function CardSearch(props : PropsCunston, ) {
             </div>
             <div className={Styles[props.CustomClass]}>
                 <Link to={`Synopsis/${props.movie?.id}`}> <BsFillInfoCircleFill /></Link>
-                <Link to={`Synopsis/${props.movie?.id}`}> <AiOutlinePlayCircle /></Link>
+                <Link to={`Video/${props.movie?.id}`}> <AiOutlinePlayCircle /></Link>
             </div>
 
         </div>
