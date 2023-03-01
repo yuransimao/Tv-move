@@ -44,9 +44,9 @@ animation:fadeUp .6s linear;
 .btn{
 transition: .3s linear;
 visibility: hidden;
-position: relative;
+position: absolute;
 z-index: 2;
-top:calc(150px - 20rem);
+top:calc(150px - (-2rem));
 display: flex;
 align-items: center;
 justify-content: center;
@@ -56,15 +56,15 @@ justify-content: center;
 a{
 &:nth-child(1){
 position: relative;
-top: calc(150px - 32rem);
-right: calc(85% - 17rem);
+top: calc(150px - 31rem);
+right: calc(100% - 12rem);
 color: rgb(190, 114, 0);
 font-size: 1.4rem;
 }
 &:nth-child(2){
 position: absolute;
 top: -8rem;
-
+right: calc(100% - 10rem);
 font-size: 5rem;
 color: rgb(255, 255, 255);
 }
@@ -79,4 +79,126 @@ color: rgb(255, 255, 255);
         transform:translateX(-5rem);
         
     }
+}
+
+@media screen and (max-width:1262px), screen and (max-height:680px){
+.moviecard{
+
+.card_Img{
+
+
+
+img{
+
+
+}
+
+}
+
+
+
+
+.btn{
+
+
+
+
+a{
+&:nth-child(1){
+right: calc(100% - 10rem);
+}
+&:nth-child(2){
+    right: calc(100% - 8rem);
+}
+
+}
+}
+
+}
+        
+       
+        
+}
+
+
+
+
+
+@media screen and (max-width:1023px), screen and (max-height:680px){
+.moviecard{
+
+.card_Img{
+
+
+
+img{
+
+
+}
+
+}
+
+
+
+
+.btn{
+
+
+
+
+a{
+&:nth-child(1){
+right: calc(100% - 14rem);
+}
+&:nth-child(2){
+    right: calc(100% - 10rem);
+}
+
+}
+}
+
+}
+        
+       
+        
+}
+
+
+@media screen and (max-width:899px), screen and (max-height:680px){
+.moviecard{
+
+.card_Img{
+
+
+
+img{
+
+
+}
+
+}
+
+
+
+
+.btn{
+
+
+
+
+a{
+&:nth-child(1){
+    top: calc(150px - 35rem);
+}
+&:nth-child(2){
+    
+}
+
+}
+}
+
+}
+        
+       
+        
 }
