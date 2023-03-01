@@ -34,7 +34,14 @@ height: 50%;
 }
 
 
-  
+@media screen and (max-width:750px), screen and (max-height:680px){
+    .text {
+        margin-top: -10rem;
+    }
+    .swiper {
+        
+    }
+}
   
   
  

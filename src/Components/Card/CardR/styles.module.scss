@@ -82,42 +82,92 @@ position:relative;
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 25%;
+max-width: 25%;
 
 }
 }
 }
-@media screen and (max-width:750px), screen and (max-height:680px){
-.moviecard{
-.card_Img{
 
-img{
+@media screen and (max-width:1115px), screen and (max-height:680px){
+  .moviecard{
+  
+  .container{
+  
+  .btn{
+    
+    max-width: 35%;
+    }
 
+    .Synops{
+      max-width: 90%;
+    }
+  
+  }
+  }
+  }
+  
+  @media screen and (max-width:750px), screen and (max-height:680px){
+  .moviecard{
+  
+  .card_Img{
+  img{
+  height: calc(100vh/3.6);
+  }
+  }
+  .container{
+  top:calc(100vh/7);
+  .btn{
+    padding-right: 5rem;
+    top:calc(100vh/(-8));
+    left:52rem;
+    max-width: 40%;
+    }
+    .Synops{
+      max-width: 100%;
+    }
+  }
+  
+  }
+  }
+  
+  
+  
+  @media screen and (max-width:579px), screen and (max-height:680px){
+  .moviecard{
+    .container{
+  
+      .btn{
+        
+        max-width: 60%;
+        }
+        .Synops{
+          max-width: 62%;
+        }
+      }
 
-width: 100%;
-height: 60%vh;
-
-}
-
-}
-}
-
-
-}
-@media screen and (max-width:500px), screen and (max-height:680px){
-.moviecard{
-.card_Img{
-
-img{
-
-
-
-height: 40vh;
-object-fit: cover;
-}
-
-}
-}
-
-
-}
+  }
+  
+  }
+  
+  
+  
+  @media screen and (max-width:500px), screen and (max-height:680px){
+  .moviecard{
+    .card_Img{
+     
+      
+      img{
+     
+      height: calc(100vh/4.6);
+      
+      }
+  }
+  
+  .container{
+    top:calc(100vh/8);
+  }
+  
+  }
+  
+  
+  }

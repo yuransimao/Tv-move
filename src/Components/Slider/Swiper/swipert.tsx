@@ -27,9 +27,7 @@ export function Swipert(props : SwiperProps) {
    
       <Swiper
         spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={false}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
