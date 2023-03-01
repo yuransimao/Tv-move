@@ -43,6 +43,11 @@ export function Synopsis(){
             
             <div className={Styles['container-card']}>
                 <CardSearch  movie={movies}/>
+                <div className={Styles['Date']}>
+                    <h4>Date</h4>
+                    <p>{movies?.release_date}</p>
+                </div>
+
             </div>
            
             <div className={Styles['Synops-Text']}>
@@ -52,21 +57,18 @@ export function Synopsis(){
                     <p>{movies?.overview}</p>
                 </div>
 
-                <div className={Styles['Gener']}>
-                    <h2>Gener</h2>
-                    <p>{gener}</p>
+                <div className={Styles['Gener-Prodution']}>
+                    <div className={Styles['Gener']}>
+                        <h2>Gener</h2>
+                        <p>{gener}</p>
+                    </div>
+                    <div className={Styles['Prodution']}>
+                        <h3>Production Companie</h3>
+                        <p>{production_companies}</p>
+                    </div>
                 </div>
 
-                <div className={Styles['Prodution']}>
-                    <h3>Production Companie</h3>
-                    <p>{production_companies}</p>
-                </div>
-
-                <div className={Styles['Date']}>
-                    <h4>Date</h4>
-                    <p>{movies?.release_date}</p>
-                </div>
-
+                
             </div>
 
         </div>

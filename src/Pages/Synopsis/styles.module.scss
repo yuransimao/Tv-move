@@ -13,6 +13,20 @@ margin: 4% 8%;
 
 .container-card{   
 min-width: 30%;
+.Date{
+
+h1{
+font-weight: 600;
+font-family: $font-Source;
+font-size: 2rem;
+}
+p{
+padding: 0.5rem 0;
+font-size: 1em;
+width: 60%;
+text-align: justify;
+}
+}
 
 }
 
@@ -32,6 +46,10 @@ width: 60%;
 text-align: justify;
 }
 }
+.Gener-Prodution{
+display: flex;
+padding: 0.5rem 0;
+
 .Gener{
 h1{
 font-weight: 600;
@@ -46,30 +64,62 @@ text-align: justify;
 }
 
 .Prodution{
+margin-left:3rem ;
 h1{
 font-weight: 600;
 font-family: $font-Source;
 }
 p{
 padding: 0.5rem 0;
-font-size: 1.4em;
+font-size: 1.5em;
 width: 60%;
 text-align: justify;
 }
 }
-.Date{
-h1{
-font-weight: 600;
-font-family: $font-Source;
-font-size: 2rem;
 }
+
+
+}
+}
+}
+
+@media screen and (max-width:750px), screen and (max-height:680px){
+.synops{
+
+
+
+.container_snops{
+    margin: 12% 8%;
+.container-card{   
+min-width: 40%;
+
+}
+
+.Synops-Text{
+
+
+.Descricao{
+
+
 p{
-padding: 0.5rem 0;
-font-size: 1.4em;
-width: 60%;
-text-align: justify;
+
+width: 100%;
+
 }
 }
+.Gener-Prodution{
+
+flex-direction: column;
+
+
+
+.Prodution{
+    margin-left:0;
+
+}
+}
+}
+
 
 }
 }
