@@ -34,34 +34,41 @@ export function Synopsis(){
         
     return (
         <div className={Styles['synops']}>
+
         <div className={Styles['Synops-Card']}>
            {movies &&  <CardS movie={movies}/>}
         </div>
+
         <div className={Styles['container_snops']}>
             
             <div className={Styles['container-card']}>
                 <CardSearch  movie={movies}/>
             </div>
            
-            <div className={'Synops-Text'}>
+            <div className={Styles['Synops-Text']}>
                 
                 <div className={Styles['Descricao']}>
                     <h1>Synopsis</h1> <hr/>
-                    <p className={Styles['overview']}>{movies?.overview}</p>
+                    <p>{movies?.overview}</p>
                 </div>
+
                 <div className={Styles['Gener']}>
                     <h2>Gener</h2>
                     <p>{gener}</p>
                 </div>
+
                 <div className={Styles['Prodution']}>
                     <h3>Production Companie</h3>
                     <p>{production_companies}</p>
                 </div>
-                <div className={Styles['date']}>
+
+                <div className={Styles['Date']}>
                     <h4>Date</h4>
                     <p>{movies?.release_date}</p>
                 </div>
+
             </div>
+
         </div>
         </div>
     )

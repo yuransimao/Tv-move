@@ -1,30 +1,76 @@
+@import '../../Styles/import';
 .synops{
 width: 100%;
-height: 100%;
+
 overflow: hidden;
 
 
 .container_snops{
 max-width: 100%;
 display: flex;
-margin: 4%;
+margin: 4% 8%;
 
-.container-card{
-   
-    width: 20%;
-    
+
+.container-card{   
+min-width: 30%;
 
 }
-.Descricao{
-    
 
-.overview {
-width: 70%;
-line-height: 1.5rem;
-font-size: 1.5rem;
+.Synops-Text{
+margin-left: 1rem;
+
+.Descricao{
+
+h1{
+font-weight: 600;
+font-family: $font-Source;
+}
+p{
+padding: 1rem 0;
+font-size: 1.4em;
+width: 60%;
+text-align: justify;
+}
+}
+.Gener{
+h1{
+font-weight: 600;
+font-family: $font-Source;
+}
+p{
+padding: 0.5rem 0;
+font-size: 1.4em;
+width: 60%;
 text-align: justify;
 }
 }
 
+.Prodution{
+h1{
+font-weight: 600;
+font-family: $font-Source;
+}
+p{
+padding: 0.5rem 0;
+font-size: 1.4em;
+width: 60%;
+text-align: justify;
+}
+}
+.Date{
+h1{
+font-weight: 600;
+font-family: $font-Source;
+font-size: 2rem;
+}
+p{
+padding: 0.5rem 0;
+font-size: 1.4em;
+width: 60%;
+text-align: justify;
+}
+}
+
+}
 }
 }
