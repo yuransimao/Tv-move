@@ -11,7 +11,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 export function Synopsis(){
     const [movies , setMovies] = useState(null)
     const {id} = useParams() 
-
+    console.log(id)
     const getSynops = async (url : any) =>{
         const res = await fetch(url)
         const data = await res.json()
