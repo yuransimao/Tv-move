@@ -42,7 +42,7 @@ export function Synopsis(){
         <div className={Styles['container_snops']}>
             
             <div className={Styles['container-card']}>
-                <CardSearch  movie={movies}/>
+                <CardSearch  movie={movies} CustomClass={'btnNone'}/>
                 <div className={Styles['Date']}>
                     <h4>Date</h4>
                     <p>{movies?.release_date}</p>

@@ -1,207 +1,193 @@
 
 
- 
 
 
-    .moviecard{
-        min-height: calc(150px * 1.5);
-        height: calc(150px * 1.5);
-        max-width: 100%;
-        transition: .3s linear;
-        margin-bottom: 4%;
-        
-        
-        border-radius: 4%;
-        
-        .card_Img{
-        filter: blur(0);
-        position: relative;
-        z-index: 1;
-        transition: .3s linear;
-        
-        &:hover{
-        
-        }
-        
-        img{
-        
-        box-shadow: 4px 4px 4px 4px rgba(51, 51, 51, 0.315);
-        border-radius: 4%;
-        max-width: 100%;
-        height: calc(150px * 1.5);
-        object-fit: cover;
-        }
-        
-        }
-        
-        
-        &:hover{
-        transform: scale(1.2);
-        cursor: pointer;
-        .btn{
-        visibility:visible;
-        animation:fadeUp .6s linear;
-        }
-        }
-        
-        .btn{
-        transition: .3s linear;
-        visibility: hidden;
-        position: absolute;
-        z-index: 2;
-        top:calc(150px - (-2rem));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        
-        
-        a{
-        &:nth-child(1){
-        position: relative;
-        top: calc(150px - 31rem);
-        right: calc(100% - 12rem);
-        color: rgb(190, 114, 0);
-        font-size: 1.4rem;
-        }
-        &:nth-child(2){
-        position: absolute;
-        top: -8rem;
-        right: calc(100% - 10rem);
-        font-size: 5rem;
-        color: rgb(255, 255, 255);
-        }
-        
-        }
-        }
-        
-        }
-        
-        @keyframes fadeUp{
-            0%{
-                transform:translateX(-5rem);
-                
-            }
-        }
-        
-        @media screen and (max-width:1262px), screen and (max-height:680px){
-        .moviecard{
-        
-        .card_Img{
-        
-        
-        
-        img{
-        
-        
-        }
-        
-        }
-        
-        
-        
-        
-        .btn{
-        
-        
-        
-        
-        a{
-        &:nth-child(1){
-        right: calc(100% - 10rem);
-        }
-        &:nth-child(2){
-            right: calc(100% - 8rem);
-        }
-        
-        }
-        }
-        
-        }
-                
-               
-                
-        }
-        
-        
-        
-        
-        
-        @media screen and (max-width:1023px), screen and (max-height:680px){
-        .moviecard{
-        
-        .card_Img{
-        
-        
-        
-        img{
-        
-        
-        }
-        
-        }
-        
-        
-        
-        
-        .btn{
-        
-        
-        
-        
-        a{
-        &:nth-child(1){
-        right: calc(100% - 14rem);
-        }
-        &:nth-child(2){
-            right: calc(100% - 10rem);
-        }
-        
-        }
-        }
-        
-        }
-                
-               
-                
-        }
-        
-        
-        @media screen and (max-width:899px), screen and (max-height:680px){
-        .moviecard{
-        
-        .card_Img{
-        
-        
-        
-        img{
-        
-        
-        }
-        
-        }
-        
-        
-        
-        
-        .btn{
-        
-        
-        
-        
-        a{
-        &:nth-child(1){
-            top: calc(150px - 35rem);
-        }
-        &:nth-child(2){
-            
-        }
-        
-        }
-        }
-        
-        }
-                
-               
-                
-        }
+
+.moviecard{
+min-height: calc(150px * 1.5);
+height: calc(150px * 1.5);
+max-width: 100%;
+transition: .3s linear;
+margin-bottom: 4%;
+
+
+border-radius: 4%;
+
+.card_Img{
+filter: blur(0);
+position: relative;
+z-index: 1;
+transition: .3s linear;
+
+&:hover{
+
+}
+
+img{
+
+box-shadow: 4px 4px 4px 4px rgba(51, 51, 51, 0.315);
+border-radius: 4%;
+max-width: 100%;
+height: calc(150px * 1.5);
+object-fit: cover;
+}
+
+}
+
+
+&:hover{
+transform: scale(1.2);
+cursor: pointer;
+.btn{
+visibility:visible;
+animation:fadeUp .6s linear;
+}
+}
+
+.btn{
+transition: .3s linear;
+visibility: hidden;
+position: absolute;
+z-index: 2;
+top:calc(150px - (-2rem));
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+
+a{
+&:nth-child(1){
+position: relative;
+top: calc(150px - 31rem);
+right: calc(100% - 12rem);
+color: rgb(190, 114, 0);
+font-size: 1.4rem;
+}
+&:nth-child(2){
+position: absolute;
+top: -8rem;
+right: calc(100% - 10rem);
+font-size: 5rem;
+color: rgb(255, 255, 255);
+}
+
+}
+}
+.btnNone{
+    display:none;
+transition: .3s linear;
+visibility: hidden;
+position: absolute;
+z-index: 2;
+top:calc(150px - (-2rem));
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+
+a{
+&:nth-child(1){
+position: relative;
+top: calc(150px - 31rem);
+right: calc(100% - 12rem);
+color: rgb(190, 114, 0);
+font-size: 1.4rem;
+}
+&:nth-child(2){
+position: absolute;
+top: -8rem;
+right: calc(100% - 10rem);
+font-size: 5rem;
+color: rgb(255, 255, 255);
+}
+
+}
+}
+
+}
+        
+@keyframes fadeUp{
+0%{
+transform:translateX(-5rem);
+
+}
+}
+        
+@media screen and (max-width:1262px), screen and (max-height:680px){
+.moviecard{
+
+.btn{
+
+a{
+&:nth-child(1){
+right: calc(100% - 10rem);
+}
+&:nth-child(2){
+right: calc(100% - 8rem);
+}
+
+}
+}
+
+}
+
+
+
+}
+        
+        
+        
+        
+        
+@media screen and (max-width:1023px), screen and (max-height:680px){
+.moviecard{
+
+.btn{
+
+
+
+
+a{
+&:nth-child(1){
+right: calc(100% - 14rem);
+}
+&:nth-child(2){
+right: calc(100% - 10rem);
+}
+
+}
+}
+
+}
+    
+    
+    
+}
+        
+        
+        
+        
+        
+        
+        
+@media screen and (max-width:899px), screen and (max-height:680px){
+.moviecard{
+
+
+.btn{
+
+a{
+&:nth-child(1){
+top: calc(150px - 35rem);
+}
+
+}
+}
+
+}
+    
+    
+    
+}

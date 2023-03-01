@@ -6,8 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const imgUrl = import.meta.env.VITE_IMG
 
-
-export function CardSearch({movie}) {
+interface PropsCunston{
+    CustomClass?:any
+    movie:any
+}
+interface Movie{
+    movie: {}
+}
+export function CardSearch(props : PropsCunston, ) {
 
     return (
         <>
@@ -16,11 +22,11 @@ export function CardSearch({movie}) {
 
 
             <div className={Styles['card_Img']}>
-                <img src={imgUrl + `${movie?.poster_path}`} alt='filme'/>
+                <img src={imgUrl + `${props.movie?.poster_path}`} alt='filme'/>
             </div>
-            <div className={Styles['btn']}>
-                <Link to={`Synopsis/${movie?.id}`}> <BsFillInfoCircleFill /></Link>
-                <Link to={`Synopsis/${movie?.id}`}> <AiOutlinePlayCircle /></Link>
+            <div className={Styles[props.CustomClass]}>
+                <Link to={`Synopsis/${props.movie?.id}`}> <BsFillInfoCircleFill /></Link>
+                <Link to={`Synopsis/${props.movie?.id}`}> <AiOutlinePlayCircle /></Link>
             </div>
 
         </div>
