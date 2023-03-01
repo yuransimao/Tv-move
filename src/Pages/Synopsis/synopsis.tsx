@@ -38,7 +38,11 @@ export function Synopsis(){
            {movies &&  <CardS movie={movies}/>}
         </div>
         <div className={Styles['container_snops']}>
-            {<CardSearch movie={movies}/>}
+            
+            <div className={Styles['container-card']}>
+                <CardSearch  movie={movies}/>
+            </div>
+           
             <div className={'Synops-Text'}>
                 
                 <div className={Styles['Descricao']}>

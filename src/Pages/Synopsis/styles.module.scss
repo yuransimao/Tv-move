@@ -5,11 +5,19 @@ overflow: hidden;
 
 
 .container_snops{
+max-width: 100%;
+display: flex;
+margin: 4%;
 
+.container-card{
+   
+    width: 20%;
+    
 
+}
 .Descricao{
     
- max-width:80% ;
+
 .overview {
 width: 70%;
 line-height: 1.5rem;
