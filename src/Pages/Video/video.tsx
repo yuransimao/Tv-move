@@ -9,7 +9,7 @@ export function Videos(){
     const {id} = useParams()
     const [video , setVideo] = useState()
     
-    const getVideo = async (url) =>{
+    const getVideo = async (url : any) =>{
         const resp = await fetch(url)
         const data = await resp.json()
         setVideo(data)
