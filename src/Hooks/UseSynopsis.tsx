@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect} from "react";
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
+const  TVURL = import.meta.env.VITE_APITV;
 
 export function Synopsiss (){
     const [movies , setMovies] = useState(null)
