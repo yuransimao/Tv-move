@@ -31,17 +31,18 @@ const [TV , setTV] = useState([])
         getTv(Tvurl)
     },[])
 
-    const poster_paths = TV.map((tv) =>{ 
+    const poster_paths = TV.flatMap((tv) =>{ 
         const poster_patha = tv.poster_path
 
         return poster_patha
     })
-    const ids = TV.map((tv) =>{ 
+    const ids = TV.flatMap((tv) =>{ 
         const ids = tv.id
 
         return id
     })
-  console.log(TV)
+  
+    console.log(ids)
 
     return (
    
@@ -52,7 +53,7 @@ const [TV , setTV] = useState([])
         
         <Swipers  poster_path={poster_path} id={id}/>
 
-        <SwiperTV poster_path={poster_paths} id={ids}/>
+        <SwiperTV poster_path={poster_paths} ids={ids}/>
         
     </div>
   

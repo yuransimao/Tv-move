@@ -16,12 +16,14 @@ import Styles from"./styles.module.scss";
 
 interface SwiperProps{
 
-  id: any
+  ids: any
   poster_path?: any
 }
 export  function SwiperTV(props : SwiperProps) {
    const img = props.poster_path
-   const id = props.id
+   const id = props.ids
+
+   console.log(id[8])
    
   return (
 
