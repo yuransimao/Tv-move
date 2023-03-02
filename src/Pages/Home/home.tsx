@@ -27,22 +27,22 @@ const [TV , setTV] = useState([])
     }
 
     useEffect(()=>{
-        const Tvurl = `${TVURL}popular?${apiKey}`
+        const Tvurl = `${TVURL}top_rated?${apiKey}`
         getTv(Tvurl)
     },[])
 
-    const poster_paths = TV.flatMap((tv) =>{ 
+    const poster_paths = TV.flatMap((tv : any) =>{ 
         const poster_patha = tv.poster_path
 
         return poster_patha
     })
-    const ids = TV.flatMap((tv) =>{ 
+    const ids = TV.flatMap((tv :any) =>{ 
         const ids = tv.id
-
+        
         return id
     })
-  
-    console.log(ids)
+  const newid = ids.filter((item , element, array) => array.indexOf(item) == element)
+    console.log(newid)
 
     return (
    
@@ -53,7 +53,7 @@ const [TV , setTV] = useState([])
         
         <Swipers  poster_path={poster_path} id={id}/>
 
-        <SwiperTV poster_path={poster_paths} ids={ids}/>
+        <SwiperTV poster_path={poster_paths} ids={newid}/>
         
     </div>
   
