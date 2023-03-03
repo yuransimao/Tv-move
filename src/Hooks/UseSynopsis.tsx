@@ -16,11 +16,13 @@ export function Synopsiss (){
            
     }
     
+    
     useEffect(() =>{
         const SynopsisURL =  `${moviesURL}${id}?${apiKey}`
         getSynops(SynopsisURL)
     },[id])
     
+    console.log(id)
     const genres = movies?.genres
     const gener = genres?.map( (g:any) => g.name)
     const production =movies?.production_companies
