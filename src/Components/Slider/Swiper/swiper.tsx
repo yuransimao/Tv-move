@@ -18,6 +18,7 @@ interface SwiperProps{
 
   id: any
   poster_path?: any
+  title : string
 }
 export  function Swipers(props : SwiperProps) {
    const img = props.poster_path
@@ -27,7 +28,7 @@ export  function Swipers(props : SwiperProps) {
 
     <>
     <div  className={Styles['text']}>
-      <h1>Top Movie</h1><hr />
+      <h1>{props.title}</h1><hr />
     </div>
     <Swiper
     slidesPerView={1}

@@ -51,7 +51,7 @@ const [TV , setTV] = useState([])
         
         <Swipert poster_path={poster_path} id={id}/>
         
-        <Swipers  poster_path={poster_path} id={id}/>
+        <Swipers title={'Top Movies'} poster_path={poster_path} id={id}/>
 
         <SwiperTV poster_path={poster_paths} ids={newid}/>
         
