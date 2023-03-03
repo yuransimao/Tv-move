@@ -12,6 +12,7 @@ export function Movies() {
     const [cinemas, setCinemas] = useState([])
     const [upcoming, setUpcoming] = useState([])
     const [popular, setPopular] = useState([])
+    const [latest, setLatest] = useState([])
 
     const getCinema = async (url: any) => {
         const resp = await fetch(url)
@@ -30,14 +31,21 @@ export function Movies() {
         const data = await resp.json()
         setPopular(data.results)
     }
+    const getlatest = async (url: any) => {
+        const resp = await fetch(url)
+        const data = await resp.json()
+        setLatest(data.results)
+    }
 
     useEffect(() => {
         const url = `${moviesURL}now_playing?${apiKey}`
         const Urlupcoming = `${moviesURL}upcoming?${apiKey}`
         const Urlpopular = `${moviesURL}popular?${apiKey}`
+        const UrlLatest = `${moviesURL}top_rated?${apiKey}`
         getCinema(url)
         getupcoming(Urlupcoming)
         getpopular(Urlpopular)
+        getlatest(UrlLatest)
     }, [])
 
     const id = cinemas.map((cinemas: any) => {
@@ -52,6 +60,12 @@ export function Movies() {
         const id = cinemas.id
         return id
     })
+
+    const idlatest = latest.map((cinemas: any) => {
+        const id = cinemas.id
+        return id
+    })
+
     const poster_path = cinemas.map((cinemas: any) => {
         const poster_path = cinemas.poster_path
         console.log(upcoming)
@@ -72,16 +86,23 @@ export function Movies() {
         return poster_path
 
     })
+    const poster_pathlatest = latest.map((cinemas: any) => {
+        const poster_path = cinemas.poster_path
+        console.log(upcoming)
+        return poster_path
+
+    })
 
 
 
 
-    console.log(upcoming)
+    console.log(latest)
     return (
         <>
             <Swipert id={id} poster_path={poster_path} />
             <Swipers title={'Filme Popular'} id={idpopular} poster_path={poster_pathpopular} />
             <Swipers title={'Filme Upcoming'} id={idupcoming} poster_path={poster_pathupcoming} />
+            <Swipers title={'Filme top rated'} id={idlatest} poster_path={poster_pathlatest} />
         </>
     )
 }
