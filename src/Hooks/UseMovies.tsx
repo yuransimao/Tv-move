@@ -11,6 +11,7 @@ export function getMovies() {
     const [upcoming, setUpcoming] = useState([])
     const [popular, setPopular] = useState([])
     const [latest, setLatest] = useState([])
+   
 
     const getCinema = async (url: any) => {
         const resp = await fetch(url)
@@ -66,27 +67,27 @@ export function getMovies() {
 
     const poster_path = cinemas.map((cinemas: any) => {
         const poster_path = cinemas.poster_path
-        console.log(upcoming)
+        
         return poster_path
 
     })
 
     const poster_pathupcoming = upcoming.map((cinemas: any) => {
         const poster_path = cinemas.poster_path
-        console.log(upcoming)
+        
         return poster_path
 
     })
 
     const poster_pathpopular = popular.map((cinemas: any) => {
         const poster_path = cinemas.poster_path
-        console.log(upcoming)
+        
         return poster_path
 
     })
     const poster_pathlatest = latest.map((cinemas: any) => {
         const poster_path = cinemas.poster_path
-        console.log(upcoming)
+       
         return poster_path
 
     })

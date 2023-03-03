@@ -42,7 +42,7 @@ const [TV , setTV] = useState([])
         return id
     })
   const newid = ids.filter((item , element, array) => array.indexOf(item) == element)
-    console.log(newid)
+    
 
     return (
    

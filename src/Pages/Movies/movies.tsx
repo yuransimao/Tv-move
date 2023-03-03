@@ -3,13 +3,15 @@ import { Swipers } from "../../Components/Slider/Swiper/swiper";
 import { getMovies } from "../../Hooks/UseMovies";
 import { useState, useEffect } from "react"
 
-const moviesURL = import.meta.env.VITE_API;
-const apiKey = import.meta.env.VITE_API_KEY;
+
 
 
 
 
 export function Movies() {
+
+    
+    
     
     const {
         id, idupcoming, idpopular,idlatest,  poster_path, poster_pathupcoming,poster_pathpopular,poster_pathlatest
