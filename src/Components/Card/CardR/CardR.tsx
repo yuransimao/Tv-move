@@ -14,6 +14,8 @@ interface Cardprops {
     img: string
 }
 export function CardR(props: Cardprops) {
+
+    
     const [Synopsis , setSynopsis] = useState([])
     const [star, setStar] = useState('')
     const [title, setTitle] = useState('')

@@ -11,6 +11,7 @@ import Styles from"./swiperslidet.module.scss";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 import { CardR } from "../../Card/CardR/CardR";
+import { useState } from "react";
 
 
 interface SwiperProps{
@@ -22,6 +23,15 @@ interface SwiperProps{
 export function Swipert(props : SwiperProps) {
     const img = props.poster_path
    const id = props.id
+
+   const [carrtItem, setItem] = useState([])
+
+   const addItems = (id) =>{
+    const idExist = carrtItem.find(item => item.id === id)
+    if()
+   }
+
+
   return (
     <>
    
