@@ -15,10 +15,26 @@ interface Cardprops {
 }
 export function CardR(props: Cardprops) {
 
-    
+
     const [Synopsis , setSynopsis] = useState([])
     const [star, setStar] = useState('')
     const [title, setTitle] = useState('')
+    const [cartItem, setItem] = useState([])
+
+    
+    const addItems = (id  = props.id) =>{
+        console.log("teste")
+
+     const idExist = cartItem.find((item:any) => item.id === id)
+     if(idExist){
+        setItem(cartItem.map((items) =>(
+            items.id === id ?{...idExist, quantity: idExist.quantity +1 } :items
+        )))
+
+     }else{
+        setItem([...cartItem,{...id, quantity: 1}])
+     }
+    }
 
     const getSynopsis = async (url:any) => {
         const res = await fetch(url)
@@ -57,7 +73,7 @@ export function CardR(props: Cardprops) {
                     <div className={Styles['btn']}>
                 
                         <Button to={`Video/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
-                        <Button to={`Synopsis/${props.id}`} title={"Add to watchlist"} background={'BackgroundTransp'}/>
+                        <Button title={"Add to watchlist"} background={'BackgroundTransp'}  addItens= {addItems}/>
                 
                 </div>
             </div>
