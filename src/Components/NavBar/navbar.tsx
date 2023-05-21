@@ -19,7 +19,7 @@ interface NavBarprops{
 
 export function Navbar( props : NavBarprops) {
       const { handleSearch, Search, setSearchs} = getSearch()
-       const ActiveLink = ({isActive}) => (isActive ? `${Styles.active}` : '' )
+       const ActiveLink = ({isActive}:any) => (isActive ? `${Styles.active}` : '' )
       
        return (
            <div className={Styles.Header}>

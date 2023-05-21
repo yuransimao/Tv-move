@@ -15,8 +15,9 @@ export function Button(props : Buttonprops){
     
    
     const {setID} =AdLists()
-    const AddList = async () => {
-       await props.id 
+    
+    const AddList =  () => {
+       console.log(props.id)
        setID(props.id)
     }
     return(

@@ -23,7 +23,7 @@ export function Synopsis(){
                 <CardSearch  movie={movies} CustomClass={'btnNone'}/>
                 <div className={Styles['Date']}>
                     <h4>Date</h4>
-                    <p>{movies?.release_date}</p>
+                    <p>{movies?.release_date }</p>
                 </div>
 
             </div>
