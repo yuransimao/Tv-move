@@ -16,13 +16,12 @@ import { CardR } from "../../Card/CardR/CardR";
 
 interface SwiperProps{
 
-    id: any
-    poster_path: any
+    topMovies: any
+    
   }
 
 export function Swipert(props : SwiperProps) {
-    const img = props.poster_path
-   const id = props.id
+   
 
   
    
@@ -41,18 +40,15 @@ export function Swipert(props : SwiperProps) {
         modules={[Autoplay,Pagination]}
         className={Styles["mySwiper"]}
       >
-        <SwiperSlide className={Styles["swiper-slide"]}> 
-        <CardR img={img[13]} id={id[13]}/>
-        </SwiperSlide>
-        <SwiperSlide className={Styles["swiper-slide"]}> 
-        <CardR img={img[2]} id={id[2]}/>
-        </SwiperSlide>
-        <SwiperSlide className={Styles["swiper-slide"]}> 
-        <CardR img={img[3]} id={id[3]}/>
-        </SwiperSlide>
-        <SwiperSlide className={Styles["swiper-slide"]}> 
-        <CardR img={img[1]} id={id[1]}/>
-        </SwiperSlide>
+
+        {props.topMovies.map((movies:any)=>(
+          <SwiperSlide className={Styles["swiper-slide"]}> 
+          <CardR 
+          key={movies.id}
+          img={movies.poster_path} id={movies.id} />
+          </SwiperSlide>
+        ))}
+        
         
       </Swiper>
     </>

@@ -3,8 +3,9 @@ import { useState, useEffect } from "react"
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
-export function TopMovies() {
+export function AdLists() {
     const [topMovies, setMovies] = useState([])
+    const [id, setID ] = useState()
 
     const getTopMovies = async (url: any) => {
         const res = await fetch(url)
@@ -13,15 +14,16 @@ export function TopMovies() {
     }
     useEffect(() => {
 
-        const topUrl = `${moviesURL}top_rated?${apiKey}`
+        const topUrl = id && `${moviesURL}${id}/top_rated?${apiKey}`
         getTopMovies(topUrl)
 
     }, [])
 
-    console.log(typeof topMovies)
+    
 
     return{
-         topMovies
+        topMovies,
+        setID
     }
 
 }

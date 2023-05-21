@@ -12,6 +12,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 interface Cardprops {
     id: number
     img: string
+    AddList?: () => void
 }
 export function CardR(props: Cardprops) {
 
@@ -22,19 +23,7 @@ export function CardR(props: Cardprops) {
     const [cartItem, setItem] = useState([])
 
     
-    const addItems = (id  = props.id) =>{
-        console.log("teste")
-
-     const idExist = cartItem.find((item:any) => item.id === id)
-     if(idExist){
-        setItem(cartItem.map((items) =>(
-            items.id === id ?{...idExist, quantity: idExist.quantity +1 } :items
-        )))
-
-     }else{
-        setItem([...cartItem,{...id, quantity: 1}])
-     }
-    }
+    
 
     const getSynopsis = async (url:any) => {
         const res = await fetch(url)
@@ -73,7 +62,7 @@ export function CardR(props: Cardprops) {
                     <div className={Styles['btn']}>
                 
                         <Button to={`Video/${props.id}`} title={"Watch now"} background={'Backgroundred'}/>
-                        <Button title={"Add to watchlist"} background={'BackgroundTransp'}  addItens= {addItems}/>
+                        <Button title={"Add to watchlist"} background={'BackgroundTransp'} id ={props.id}/>
                 
                 </div>
             </div>

@@ -14,15 +14,15 @@ export function Movies() {
     
     
     const {
-        id, idupcoming, idpopular,idlatest,  poster_path, poster_pathupcoming,poster_pathpopular,poster_pathlatest
+    cinemas,upcoming,popular,latest
     } = getMovies()
 
     return (
         <>
-            <Swipert id={id} poster_path={poster_path} />
-            <Swipers title={'Filme Popular'} id={idpopular} poster_path={poster_pathpopular} />
-            <Swipers title={'Filme Upcoming'} id={idupcoming} poster_path={poster_pathupcoming} />
-            <Swipers title={'Filme top rated'} id={idlatest} poster_path={poster_pathlatest} />
+            <Swipert topMovies={cinemas} />
+            <Swipers title={'Filme Popular'} topMovies={popular} />
+            <Swipers title={'Filme Upcoming'} topMovies={upcoming}/>
+            <Swipers title={'Filme top rated'} topMovies={latest}/>
         </>
     )
 }

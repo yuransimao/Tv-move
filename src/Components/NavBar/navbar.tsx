@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { FiMenu } from "react-icons/fi"
 import { BiSearch,BiMoviePlay} from "react-icons/bi"
 import Styles from "./styles.module.scss"
@@ -19,7 +19,7 @@ interface NavBarprops{
 
 export function Navbar( props : NavBarprops) {
       const { handleSearch, Search, setSearchs} = getSearch()
-       
+       const ActiveLink = ({isActive}) => (isActive ? `${Styles.active}` : '' )
       
        return (
            <div className={Styles.Header}>
@@ -31,20 +31,20 @@ export function Navbar( props : NavBarprops) {
    
                <div className={Styles['Navbar_list']}>
                    <ul >
-                       <li><Link to="/">Home</Link></li>
-                       <li><Link to="/Movies">Movies</Link></li>
-                       <li><Link to="/TVShows">Tv Shows</Link></li>
-                       <li><Link to="/Watchlist">Watchlist</Link></li>
-                       <li><Link to="/Genres">Genres</Link></li>
+                       <li><NavLink to="/" className={ActiveLink }>Home</NavLink></li>
+                       <li><NavLink to="/Movies" className={ActiveLink }>Movies</NavLink></li>
+                       <li><NavLink to="/TVShows" className={ActiveLink }>Tv Shows</NavLink></li>
+                       <li><NavLink to="/Watchlist" className={ActiveLink }>Watchlist</NavLink></li>
+                       <li><NavLink to="/Genres" className={ActiveLink }>Genres</NavLink></li>
                    </ul>
                </div>
                    <div className={Styles['Responsive_listItem']}>
                        <ul >
-                           <li><Link to="/"><AiOutlineHome/></Link></li>
-                           <li><Link to="/Movies"><BiMoviePlay/></Link></li>
-                           <li><Link to="/TVShows"><CiStreamOn/></Link></li>
-                           <li><Link to="/Watchlist"><FaThList/></Link></li>
-                           <li><Link to="/Genres"><TbMovie/></Link></li>
+                           <li><NavLink to="/"><AiOutlineHome/></NavLink></li>
+                           <li><NavLink to="/Movies"><BiMoviePlay/></NavLink></li>
+                           <li><NavLink to="/TVShows"><CiStreamOn/></NavLink></li>
+                           <li><NavLink to="/Watchlist"><FaThList/></NavLink></li>
+                           <li><NavLink to="/Genres"><TbMovie/></NavLink></li>
                        </ul>
                    </div>
                

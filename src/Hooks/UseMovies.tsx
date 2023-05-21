@@ -47,52 +47,10 @@ export function getMovies() {
         getlatest(UrlLatest)
     }, [])
 
-    const id = cinemas.map((cinemas: any) => {
-        const id = cinemas.id
-        return id
-    })
-    const idupcoming = upcoming.map((cinemas: any) => {
-        const id = cinemas.id
-        return id
-    })
-    const idpopular = popular.map((cinemas: any) => {
-        const id = cinemas.id
-        return id
-    })
-
-    const idlatest = latest.map((cinemas: any) => {
-        const id = cinemas.id
-        return id
-    })
-
-    const poster_path = cinemas.map((cinemas: any) => {
-        const poster_path = cinemas.poster_path
-        
-        return poster_path
-
-    })
-
-    const poster_pathupcoming = upcoming.map((cinemas: any) => {
-        const poster_path = cinemas.poster_path
-        
-        return poster_path
-
-    })
-
-    const poster_pathpopular = popular.map((cinemas: any) => {
-        const poster_path = cinemas.poster_path
-        
-        return poster_path
-
-    })
-    const poster_pathlatest = latest.map((cinemas: any) => {
-        const poster_path = cinemas.poster_path
-       
-        return poster_path
-
-    })
+ 
 
     return {
-        id, idupcoming, idpopular,idlatest,  poster_path, poster_pathupcoming,poster_pathpopular,poster_pathlatest
+    
+    cinemas,upcoming,popular,latest
     }
 }

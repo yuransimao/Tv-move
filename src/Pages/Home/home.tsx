@@ -17,7 +17,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 export function Home(){
 
- const {poster_path, id}= TopMovies ()
+ const {topMovies}= TopMovies ()
 const [TV , setTV] = useState([])
 
     const getTv = async (url:any) =>{
@@ -39,21 +39,22 @@ const [TV , setTV] = useState([])
     const ids = TV.flatMap((tv :any) =>{ 
         const ids = tv.id
         
-        return id
+        return ids
     })
   const newid = ids.filter((item , element, array) => array.indexOf(item) == element)
     
+
 
     return (
    
     <div className={Styles['home_container']}>
         
         
-        <Swipert poster_path={poster_path} id={id}/>
+        <Swipert topMovies ={topMovies}/>
         
-        <Swipers title={'Top Movies'} poster_path={poster_path} id={id}/>
+        <Swipers title={'Top Movies'} topMovies ={topMovies}/>
 
-        <SwiperTV poster_path={poster_paths} ids={newid}/>
+        <SwiperTV Tv={TV}/>
         
     </div>
   
