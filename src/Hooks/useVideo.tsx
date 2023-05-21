@@ -3,9 +3,12 @@ import { useState, useEffect} from "react";
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
+interface Video{
+    sucess:any
+}
 export function GETVIDEO (){
     const {id} = useParams()
-    const [video , setVideo] = useState()
+    const [video , setVideo] = useState<Video | null>()
     
     const getVideo = async (url : any) =>{
         const resp = await fetch(url)
